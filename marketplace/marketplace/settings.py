@@ -81,24 +81,24 @@ DATABASES = {
     }
 }
 
-REST_FRAMEWORK = {
-    'NON_FIELD_ERRORS_KEY': 'error',
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'knox.auth.TokenAuthentication', 
-    ),
-    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 10,
+# REST_FRAMEWORK = {
+#     'NON_FIELD_ERRORS_KEY': 'error',
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'knox.auth.TokenAuthentication', 
+#     ),
+#     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+#     'PAGE_SIZE': 10,
 
-    'DATETIME_FORMAT': "%Y-%m-%d - %I:%M %p",
-    'DATETIME_INPUT_FORMAT': "%m/%d/%Y %I:%M %p",
+#     'DATETIME_FORMAT': "%Y-%m-%d - %I:%M %p",
+#     'DATETIME_INPUT_FORMAT': "%m/%d/%Y %I:%M %p",
 
-    'DATE_FORMAT': "%m/%d/%Y",
-    'DATE_INPUT_FORMAT': "%m/%d/%Y",
+#     'DATE_FORMAT': "%m/%d/%Y",
+#     'DATE_INPUT_FORMAT': "%m/%d/%Y",
 
-    'TIME_FORMAT': "%I:%M %p",
-    'TIME_INPUT_FORMAT': "%I:%M %p",
-}
+#     'TIME_FORMAT': "%I:%M %p",
+#     'TIME_INPUT_FORMAT': "%I:%M %p",
+# }
 
 
 
@@ -158,13 +158,14 @@ MEDIA_ROOT = BASE_DIR/'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-    'rest_framework.permissions.IsAuthenticated',
-    ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    # 'rest_framework.permissions.IsAuthenticated',
+    # ],
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+    #     'rest_framework_simplejwt.authentication.JWTAuthentication',
+    # ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    # 'DEFAULT_PAGINATION_CLASS': 'main.pagination.CustomPagination',
     'PAGE_SIZE': 1
 
 }
